@@ -15,7 +15,7 @@
                 "\\.html?$"            : "html",
                 ".*"                   : "text"                
         },
-        "title"  : "Funya's Blog",
+        // "title"  : "Funya's Blog",
         "comment"  : "on",
         "domain_alias"  : ["blog.funya.in"]
 }
