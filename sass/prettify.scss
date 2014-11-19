@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import "core/var";
+@import "core/css3";
+@import "core/code";
+pre {
+	background: rgba($c-3, .6);
+	padding: 10px;
+	border-radius: 4px;
+}
+.pun{
+	color: #d19292;
+	@include animation(cc 30s linear 0s infinite alternate);
+}
+.pln{
+	color: #d1a292;
+	@include animation(cc 30s linear -5s infinite alternate);
+}
+.lit{
+	color: #b7d192;
+	@include animation(cc 30s linear -10s infinite alternate);
+}
+
+  // 0% {
+  //   color: #d19292; }
+
+  // 25% {
+  //   color: #d1a292; }
+
+  // 50% {
+  //   color: #b7d192; }
+
+  // 75% {
+  //   color: #92d1b7; }
+
+  // 100% {
+  //   color: #9297d1; } }
