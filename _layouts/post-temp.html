@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<script>
+var cmd = {}
+cmd['short_name'] = 'funya';
+cmd['secret'] = 'd7e249a1ed5f16a4463f6ec3154bf745';
+cmd['thread_key'] = '{{ page.id }}';
+</script>
+<section>
+	<article>
+		<div class="tit">
+			<h2><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></h2>
+			<time>{{ page.date | date_to_string }}</time>
+		</div>
+		<div class="info">
+			<div class="content">{{ content }}</div>
+		</div>
+	</article>
+</section>
+<div class="g-cm">
+	<form action="" method="post" id="form-cm" >
+		<p>
+		<input type="text" name="author_name" placeholder="Name:">
+		</p>
+		<p>
+		<input type="text" name="author_email" placeholder="Email:">
+		</p>
+		<p>
+		<input type="text" name="author_url" placeholder="Website:">
+		</p>
+		<p>
+		<textarea name="message"></textarea>
+		</p>
+		<p>
+		<button style="submit">send</button>
+		</p>
+	</form>
+	<ul></ul>
+</div>
+
+
+<div class="ds-login"></div>
+<textarea class="u-temp" data-type="cm">
+{$ each parentPosts as v i $}
+<li>
+	<a class="user" href="{$v.author.url$}" target="_blank">
+		{$ if v.author.avatar_url $}
+		<img src="{$v.author.avatar_url$}">
+		{$ else $}
+		<img src="{{ site.url }}/img/none.png">
+		{$ /if $}
+		<span>{$ v.author.name $}</span>
+	</a>
+	<p>{$ v.message $}</p>
+	<div class="ctr">
+		<span class="t">{$ v.date $}</span>
+	</div>
+</li>
+{$/each$}
+</textarea>
