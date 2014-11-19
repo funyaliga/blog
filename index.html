@@ -1,11 +1,48 @@
 ---
 layout: default
-title: 我的Blog
+title: Your New Jekyll Site
 ---
-<h2>{{ page.title }}</h2>
-<p>最新文章</p>
-<ul>
-	{% for post in site.posts %}
-	<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-</ul>
+
+<section>
+{% for post in paginator.posts %}
+	<article>
+		<div class="tit">
+			<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+			<time>{{ post.date | date_to_string }}</time>
+		</div>
+		<div class="info">
+			<div class="content">{{ post.excerpt }}</div>
+		</div>
+		<div class="meta">
+			<a href="" class="cate">{{post.categories[0]}}</a>
+			<a href="" class="more">阅读更多</a>
+		</div>
+	</article>
+{% endfor %}
+</section>
+
+
+<!-- 分页链接 -->
+<div id="page">
+	<div class="prev">
+	{% if paginator.previous_page %}
+		{% if paginator.previous_page == 1 %}
+			<a href="/"></a>
+		{% else %}
+			<a href="{{ paginator.previous_page_path }}"></a>
+		{% endif %}
+	{% else %}
+		<span></span>
+	{% endif %}
+	</div>
+	<div class="top">
+		<a href="#">Top</a>
+	</div>
+	<div class="next">
+	{% if paginator.next_page %}
+	<a href="{{ paginator.next_page_path }}"></a>
+	{% else %}
+	<span></span>
+	{% endif %}
+	</div>
+</div>
