@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+//-----------------------------------------------------	
+// setting
+//-----------------------------------------------------	
+//是否兼容ie6-8
+$lte6: 				true !default;
+$lte7: 				true !default;
+$lte8: 				true !default;
+
+$css3Ie: 			true !default;
+$css3Old: 			true !default;
+//-----------------------------------------------------	
+// 变量
+//-----------------------------------------------------	
+
+// 宽度
+$maxWidth: 			900px;  //最大宽度
+
+// 底部阴影
+$shadow:			0 0 4px rgba(0, 0, 0, 0.2);
+
+// 颜色
+$c-bg: 				#222;  //背景色
+$c-base: 			#d38a8a; //主色
+$c-a: 				#d38a8a #1b1b1b;  //连接字体颜色
+$c-3: 				#363636;  //黑色
+$c-3-h:				#161616;
+
+
+$gap: 				20px;
+$gap2: 				16px;
+
+// font字体相关
+$fz: 				1em;    //字体大小
+$lh:        		1.8;  // 行高line-height
+// $lhPx: 				floor($fsBase * $lhBase);
+$baseColor: 		#bbb; //字体颜色
+
+$f-base: 			Avenir,'Lucida Grande',Calibri,'Trebuchet MS', Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;  //主字体
+// $f-base: 			"Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;  //主字体
+$f-pre: 			"PT Mono", Menlo, "Courier New", "Microsoft YaHei", monospace;  //副主体，用在英语上
+
+$z-navSw: 			999;
+$z-navMenu: 		999;
