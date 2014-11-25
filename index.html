@@ -7,7 +7,7 @@ title: Your New Jekyll Site
 {% for post in paginator.posts %}
 	<article>
 		<div class="tit">
-			<h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+			<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 			<time>{{ post.date | date_to_string }}</time>
 		</div>
 		<div class="info">
@@ -27,9 +27,9 @@ title: Your New Jekyll Site
 	<div class="prev">
 	{% if paginator.previous_page %}
 		{% if paginator.previous_page == 1 %}
-			<a href="{{ site.url }}"></a>
+			<a href="/"></a>
 		{% else %}
-			<a href="{{ site.url }}{{ paginator.previous_page_path }}"></a>
+			<a href="{{ paginator.previous_page_path }}"></a>
 		{% endif %}
 	{% else %}
 		<span></span>
@@ -40,7 +40,7 @@ title: Your New Jekyll Site
 	</div>
 	<div class="next">
 	{% if paginator.next_page %}
-	<a href="{{site.url}}{{ paginator.next_page_path }}"></a>
+	<a href="{{ paginator.next_page_path }}"></a>
 	{% else %}
 	<span></span>
 	{% endif %}

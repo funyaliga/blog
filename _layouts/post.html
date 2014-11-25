@@ -5,7 +5,7 @@ layout: default
 <section>
 	<article>
 		<div class="tit">
-			<h2><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></h2>
+			<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
 			<time>{{ page.date | date_to_string }}</time>
 		</div>
 		<div class="info">
@@ -30,4 +30,4 @@ var duoshuoQuery = {short_name:"funya"};
 	 || document.getElementsByTagName('body')[0]).appendChild(ds);
 })();
 </script>
-<link rel="stylesheet" href="{{ site.url }}/css/comment.css" />
+<link rel="stylesheet" href="/css/comment.css" />
