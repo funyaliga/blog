@@ -1,10 +1,10 @@
-name: Your New Jekyll Site
+name: 范鴨
 markdown: redcarpet
 pygments: true
 resource: true
 encoding: utf-8
 cm_secret: d7e249a1ed5f16a4463f6ec3154bf745
-paginate: 1
+paginate: 6
 baseurl : /
 url: http://funyaliga.github.io/blog
 excerpt_separator: "<!-- read more -->"
