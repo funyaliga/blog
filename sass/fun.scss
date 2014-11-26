@@ -167,6 +167,7 @@ article{
 article{
 	a, a:link, a:visited{
 		@include animation(cc 30s linear 0s infinite alternate);
+		// @include opacity(80);
 	}
 
 	h2{
@@ -180,8 +181,21 @@ article{
 		}
 	}
 	.content{
+		h3{
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		pre,
 		p{
 			margin-bottom: 20px;
+		}
+		ul{
+			padding-left: 20px;
+			list-style-type: disc;
+			font-size: .9rem;
+		}
+		li{
+			margin: 8px;
 		}
 	}
 
@@ -211,28 +225,45 @@ article{
 
 @include keyframes(cc) {
     0% {
-        color: #d19292
+        color: #9da1d0
     }
 
-    20% {
-        color: #d1a292
+    33% {
+       color: #9db4d0
     }
 
-    40% {
-        color: #b7d192
+    66% {
+        color: #9dd0bb
     }
 
-    60% {
-        color: #92d1b7
-    }
-
-    80% {
-        color: #9297d1
-    }
     100% {
-    	color: #c792d1;
+        color: #d09dcc
     }
 }
+// @include keyframes(cc) {
+//     0% {
+//         color: #d19292
+//     }
+
+//     20% {
+//         color: #d1a292
+//     }
+
+//     40% {
+//         color: #b7d192
+//     }
+
+//     60% {
+//         color: #92d1b7
+//     }
+
+//     80% {
+//         color: #9297d1
+//     }
+//     100% {
+//     	color: #c792d1;
+//     }
+// }
 
 
 #page{

@@ -118,7 +118,7 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 /* HTML5 媒体文件跟 img 保持一致 */
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
-  font: 400 1em/1.8 Avenir, "Lucida Grande", Calibri, "Trebuchet MS", Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif; }
+  font: 400 1em/1.8 "PT serif", 微軟正黑體, 微软雅黑, 华文细黑; }
 
 /* 去除 IE6 input/button 多余的空白 */
 button, input {
@@ -250,7 +250,8 @@ pre, code {
   font-family: "PT Mono", Menlo, "Courier New", "Microsoft YaHei", monospace;
   white-space: pre-wrap;
   word-wrap: break-word;
-  font-size: 0.92em; }
+  font-size: 0.875em;
+  line-height: 1.4; }
 
 /* 一致化 horizontal rule */
 hr {
@@ -335,7 +336,7 @@ body {
   min-height: 100%; }
 
 body {
-  font-family: Avenir, "Lucida Grande", Calibri, "Trebuchet MS", Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font-family: "PT serif", 微軟正黑體, 微软雅黑, 华文细黑;
   font-size: 1em;
   line-height: 1.8;
   color: #bbbbbb;
@@ -479,8 +480,18 @@ article h2 {
   /*text-align: center;*/ }
   article h2:hover {
     opacity: 1; }
+article .content h3 {
+  margin-bottom: 10px;
+  font-weight: bold; }
+article .content pre,
 article .content p {
   margin-bottom: 20px; }
+article .content ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  font-size: .9rem; }
+article .content li {
+  margin: 8px; }
 article time {
   display: block;
   color: #505050;
@@ -505,76 +516,52 @@ article .meta {
 
 @-webkit-keyframes cc {
   0% {
-    color: #d19292; }
+    color: #9da1d0; }
 
-  20% {
-    color: #d1a292; }
+  33% {
+    color: #9db4d0; }
 
-  40% {
-    color: #b7d192; }
-
-  60% {
-    color: #92d1b7; }
-
-  80% {
-    color: #9297d1; }
+  66% {
+    color: #9dd0bb; }
 
   100% {
-    color: #c792d1; } }
+    color: #d09dcc; } }
 @-moz-keyframes cc {
   0% {
-    color: #d19292; }
+    color: #9da1d0; }
 
-  20% {
-    color: #d1a292; }
+  33% {
+    color: #9db4d0; }
 
-  40% {
-    color: #b7d192; }
-
-  60% {
-    color: #92d1b7; }
-
-  80% {
-    color: #9297d1; }
+  66% {
+    color: #9dd0bb; }
 
   100% {
-    color: #c792d1; } }
+    color: #d09dcc; } }
 @-ms-keyframes cc {
   0% {
-    color: #d19292; }
+    color: #9da1d0; }
 
-  20% {
-    color: #d1a292; }
+  33% {
+    color: #9db4d0; }
 
-  40% {
-    color: #b7d192; }
-
-  60% {
-    color: #92d1b7; }
-
-  80% {
-    color: #9297d1; }
+  66% {
+    color: #9dd0bb; }
 
   100% {
-    color: #c792d1; } }
+    color: #d09dcc; } }
 @keyframes cc {
   0% {
-    color: #d19292; }
+    color: #9da1d0; }
 
-  20% {
-    color: #d1a292; }
+  33% {
+    color: #9db4d0; }
 
-  40% {
-    color: #b7d192; }
-
-  60% {
-    color: #92d1b7; }
-
-  80% {
-    color: #9297d1; }
+  66% {
+    color: #9dd0bb; }
 
   100% {
-    color: #c792d1; } }
+    color: #d09dcc; } }
 #page {
   margin: 20px auto;
   text-align: center;

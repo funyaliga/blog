@@ -2,14 +2,14 @@
 <html class="z-bxsbb">
 <head>
 <meta charset="UTF-8">
-<title>hello world!</title>
+<title>Sublime Text 2 备忘录</title>
 <link rel="stylesheet" href="/css/fun.css" />
 <link rel="stylesheet" href="/css/prettify.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
-<script src="js/zepto.min.js"></script>
+<script src="/js/zepto.min.js"></script>
 </head>
 <body>
 <header>
@@ -40,11 +40,56 @@
     <section>
 	<article>
 		<div class="tit">
-			<h2><a href="/hello-work.html">hello world!</a></h2>
-			<time>06 Dec 2012</time>
+			<h2><a href="/12128">Sublime Text 2 备忘录</a></h2>
+			<time>08 Dec 2012</time>
 		</div>
 		<div class="info">
-			<div class="content"><h3>Hello, World</h3>
+			<div class="content"><h3>推荐资料</h3>
+
+<ul>
+<li>  Sublime Text教程：<a href="http://kevintsengtw.blogspot.com/p/sublime-text-2.html">http://kevintsengtw.blogspot.com/p/sublime-text-2.html</a></li>
+<li>  设置文件详解：<a href="http://www.feelcss.com/sublime-text-2-settings.html">http://www.feelcss.com/sublime-text-2-settings.html</a></li>
+</ul>
+
+<h3>package control安装</h3>
+
+<pre>
+view->show console （快捷键Ctrl+`）调出console
+
+黏贴下面代码，回车
+import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print 'Please restart Sublime Text to finish installation'
+
+重启软件后，在 Perferences 有 package control 就是成功了
+</pre>
+
+<h3>安装Zen Coding</h3>
+
+<pre>
+Perferences->package control（快捷键：ctrl+shift+p）
+输入install
+搜索 emmet (原ZenCoding，现在已经改名为emmet )
+</pre>
+
+<h3>我的配置</h3>
+
+<pre>
+{
+    "caret_style": "phase",
+    "fade_fold_buttons": false,
+    "font_face": "YaHei Consolas Hybrid",
+    "font_size": 9,
+    "highlight_line": true,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "line_padding_bottom": 1,
+    "line_padding_top": 1,
+    "margin": 4,
+    "tab_size": 4,
+    "word_wrap": true
+}
+</pre>
 </div>
 		</div>
 	</article>
@@ -52,7 +97,7 @@
 
 
 <!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="/hello-work" data-title="hello world!" data-url="/hello-work.html"></div>
+<div class="ds-thread" data-thread-key="/Sublime Text 2 备忘录" data-title="Sublime Text 2 备忘录" data-url="/12128"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

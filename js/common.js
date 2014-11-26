@@ -1,5 +1,5 @@
 $(function(){
-	$("pre").addClass("prettyprint");
+	$(".prettify").addClass("prettyprint");
 	prettyPrint();	
 
 	var code = {};
