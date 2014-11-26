@@ -1,7 +1,6 @@
 $(function(){
 	// $(".prettify").addClass("prettyprint");
 	// prettyPrint();	
-	hljs.initHighlightingOnLoad();
 
 	var code = {};
 	$('.u-temp').each(function(){
@@ -14,4 +13,43 @@ $(function(){
 	template.config('openTag', '{$')
 	template.config('closeTag', '$}')
 
+	$.ajax({
+		url: 'http://funya.duoshuo.com/api/threads/listPosts.json',
+		dataType: 'json',
+		data: {
+			thread_key: cmd.thread_key
+		},
+		success: function(d){
+			console.log(d.parentPosts)
+			// var html_cm = '';
+			// $.each(d.parentPosts,function(i,v){
+			// 	var t = new Date('2014-10-08T14:19:28+08:00');
+			// 	v.date = (t.getMonth()+1) + '月' + t.getDate() + '日';
+			// 	v.author.url || (v.author.avatar_url = 'javascript:')
+			// 	v.author.avatar_url || (v.author.avatar_url = '{{ site.url }}/img/none.png')
+			// 	html_cm += code.cm.temp(v);
+			// })
+
+			var html_cm = template.compile(code['cm'])(d);
+			console.log(html_cm)
+			$('.g-cm ul').html(html_cm);
+		}
+	})
+
+	$('#form-cm').submit(function(event){
+		event.preventDefault();
+		var that = $(this);
+		$.each(that.find('input,textarea'),function(i,v){
+			cmd[$(v).attr('name')] = $(v).val();
+		})
+
+		$.ajax({
+			url: 'http://duoshuo.com/api/posts/create.json',
+			data: cmd,
+			type: 'post',
+			success: function(d){
+				that.find('input,textarea').val('');
+			}
+		})
+	})
 })
