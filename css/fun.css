@@ -250,8 +250,7 @@ pre, code {
   font-family: "PT Mono", Menlo, "Courier New", "Microsoft YaHei", monospace;
   white-space: pre-wrap;
   word-wrap: break-word;
-  font-size: 0.875em;
-  line-height: 1.4; }
+  font-size: .875em; }
 
 /* 一致化 horizontal rule */
 hr {
@@ -268,10 +267,6 @@ small, .typo-small,
 figcaption {
   font-size: 0.9em;
   color: #888; }
-
-strong, b {
-  font-weight: inherit;
-  color: #000; }
 
 /* 可拖动文件添加拖动手势 */
 [draggable] {
@@ -331,6 +326,9 @@ html.z-bxsbb *, html.z-bxsbb *:before, html.z-bxsbb *:after {
 
 html {
   height: 100%; }
+  @media (max-width: 480px) {
+    html {
+      font-size: .875em; } }
 
 body {
   min-height: 100%; }
@@ -431,6 +429,7 @@ nav {
   width: 280px;
   background: #363636;
   font-size: 14px;
+  font-size: .875rem;
   border-radius: 4px;
   z-index: 999; }
   .nav-menu:before {
@@ -450,11 +449,11 @@ nav {
 
 #logo,
 article {
-  padding: 20px;
+  padding: 20px 14px;
   border-bottom: 1px solid #1d1d1d; }
 
 #logo {
-  font-size: 1em; }
+  font-size: 1rem; }
   @media (max-width: 35em) {
     #logo {
       text-align: center; } }
@@ -466,53 +465,55 @@ article {
     color: #6f6f6f;
     text-align: left; }
 
-article a, article a:link, article a:visited {
-  -webkit-animation: cc 30s linear 0s infinite alternate;
-  -moz-animation: cc 30s linear 0s infinite alternate;
-  animation: cc 30s linear 0s infinite alternate; }
-article h2 {
-  letter-spacing: 3px;
-  font-size: 1.8em;
-  opacity: .9;
-  -webkit-transition: color 1.3s ease-out;
-  -moz-transition: color 1.3s ease-out;
-  transition: color 1.3s ease-out;
-  /*text-align: center;*/ }
-  article h2:hover {
-    opacity: 1; }
-article .content h3 {
-  margin-bottom: 10px;
-  font-weight: bold; }
-article .content pre,
-article .content p {
-  margin-bottom: 20px; }
-article .content ul {
-  padding-left: 20px;
-  list-style-type: disc;
-  font-size: .9rem; }
-article .content li {
-  margin: 8px; }
-article time {
-  display: block;
-  color: #505050;
-  font-size: .85em;
-  /*text-align: right;*/ }
-article .meta {
-  text-align: right; }
-  article .meta a {
-    display: inline-block;
-    color: #6f6f6f;
-    font-size: .85em;
-    margin-right: .5em;
-    border-bottom: 1px dashed #414141;
-    -webkit-animation: none;
-    -moz-animation: none;
-    animation: none;
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    transition: all 1s ease-out; }
-    article .meta a:hover {
-      color: #fff; }
+article {
+  word-wrap: break-word; }
+  article a, article a:link, article a:visited {
+    -webkit-animation: cc 30s linear 0s infinite alternate;
+    -moz-animation: cc 30s linear 0s infinite alternate;
+    animation: cc 30s linear 0s infinite alternate; }
+  article h2 {
+    letter-spacing: 3px;
+    font-size: 1.8rem;
+    opacity: .9;
+    -webkit-transition: color 1.3s ease-out;
+    -moz-transition: color 1.3s ease-out;
+    transition: color 1.3s ease-out;
+    /*text-align: center;*/ }
+    article h2:hover {
+      opacity: 1; }
+  article .content h3 {
+    margin-bottom: 10px;
+    font-weight: bold; }
+  article .content pre,
+  article .content p {
+    margin-bottom: 20px; }
+  article .content ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    font-size: .9rem; }
+  article .content li {
+    margin: 8px; }
+  article time {
+    display: block;
+    color: #505050;
+    font-size: .85rem;
+    /*text-align: right;*/ }
+  article .meta {
+    text-align: right; }
+    article .meta a {
+      display: inline-block;
+      color: #6f6f6f;
+      font-size: .85rem;
+      margin-right: .5rem;
+      border-bottom: 1px dashed #414141;
+      -webkit-animation: none;
+      -moz-animation: none;
+      animation: none;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      transition: all 1s ease-out; }
+      article .meta a:hover {
+        color: #fff; }
 
 @-webkit-keyframes cc {
   0% {
@@ -570,7 +571,7 @@ article .meta {
     display: inline-block;
     vertical-align: middle;
     background: #363636;
-    font-size: 14px; }
+    font-size: .875rem; }
   #page .top {
     padding: 14px 15px;
     line-height: 1;
@@ -587,6 +588,7 @@ article .meta {
     vertical-align: middle;
     text-align: center;
     font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 300;
     color: #fff;
     overflow: hidden; }
@@ -643,7 +645,7 @@ article .meta {
     height: 60px;
     border-radius: 50%; }
   .g-cm .ctr {
-    font-size: .75em;
+    font-size: .75rem;
     color: #666; }
   .g-cm input, .g-cm textarea {
     width: 100%;

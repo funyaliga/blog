@@ -1,0 +1,67 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fixed</title>
+<style>
+*{
+	margin: 0;padding:0;
+}
+* html,* html body /* 修正IE6振动bug */{ _text-overflow:ellipsis;}
+.fixed_top {
+	position:fixed;
+	top:0px;
+}
+* html .fixed_top  /* IE6 头部固定 */{
+	position:absolute;
+	bottom:auto;
+	top:expression(eval(document.documentElement.scrollTop));
+}
+
+
+.fixed_bottom{
+	position:fixed;
+	bottom:0px;
+}
+* html .fixed_bottom /* IE6 底部固定  */{
+	position:absolute;
+	bottom:auto;
+	top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}
+
+.con{
+	width: 980px;
+	height: 1500px;
+	border: 1px solid #555;
+	margin: 0 auto;
+}
+.red{
+	background: red;
+}
+.fixed_top_m{
+	left: 50%;
+	margin-left: 491px;
+	margin-top: 20px;
+}
+.fixed_bottom_m{
+	left: 50%;
+	margin-left: 491px;
+	margin-bottom: 40px;
+}
+
+</style>
+</head>
+<body>
+<div class="con">
+<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>form:http://blog.funya.in
+	
+</div>
+<div class="fixed_top red fixed_top_m">
+	顶部
+</div>
+<div class="fixed_bottom red fixed_bottom_m">
+	底部
+</div>
+</body>
+</html>

@@ -6,7 +6,12 @@
 
 $lte6: 				false !default;
 $lte8: 				false !default;
-html{height: 100%;}
+html{
+	height: 100%;
+	@media (max-width: 480px){
+		font-size: .875em;
+	}
+}
 body{min-height: 100%}
 
 body {
@@ -120,6 +125,7 @@ nav{
 	width: 280px;
 	background: $c-3;
 	font-size: 14px;
+	font-size: .875rem;
 	border-radius: 4px;
 	z-index: $z-navMenu;
 	&:before{
@@ -140,12 +146,12 @@ nav{
 
 #logo,
 article{
-	padding: 20px;
+	padding: 20px 14px;
 	border-bottom: 1px solid #1d1d1d;
 }
 
 #logo{
-	font-size: 1em;
+	font-size: 1rem;
 	@media(max-width: em(560)) {
 		&{
 			text-align: center;
@@ -165,6 +171,7 @@ article{
 }
 
 article{
+	word-wrap: break-word;
 	a, a:link, a:visited{
 		@include animation(cc 30s linear 0s infinite alternate);
 		// @include opacity(80);
@@ -172,7 +179,7 @@ article{
 
 	h2{
 		letter-spacing: 3px;
-		font-size: 1.8em;
+		font-size: 1.8rem;
 		opacity: .9;
 		@include transition(color 1.3s ease-out);
 		/*text-align: center;*/
@@ -202,7 +209,7 @@ article{
 	time{
 		display: block;
 		color: #505050;
-		font-size: .85em;
+		font-size: .85rem;
 		/*text-align: right;*/
 	}
 	.meta{
@@ -210,8 +217,8 @@ article{
 		a{
 			display: inline-block;
 			color: #6f6f6f;
-			font-size: .85em;
-			margin-right: .5em;
+			font-size: .85rem;
+			margin-right: .5rem;
 			border-bottom: 1px dashed #414141;
 			@include animation(none);
 			@include transition(all 1s ease-out);
@@ -277,7 +284,7 @@ article{
 		display: inline-block;
 		vertical-align: middle;
 		background: rgba($c-3, 1);
-		font-size: 14px;
+		font-size: .875rem;
 	}
 
 	.top{
@@ -298,6 +305,7 @@ article{
 			vertical-align: middle;
 			text-align: center;
 			font-size: 36px;
+			font-size: 2.25rem;
 			font-weight: 300;
 			color: #fff;
 			overflow: hidden;
@@ -372,7 +380,7 @@ article{
 		border-radius: 50%;
 	}
 	.ctr{
-		font-size: .75em;
+		font-size: .75rem;
 		color: #666;
 	}
 	input,textarea{

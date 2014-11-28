@@ -2,7 +2,11 @@
 @import "core/var";
 @import "core/css3";
 @import "core/code";
-
+pre,code{
+	// font-size: .75rem;
+	font-size: .8125rem;
+	line-height: 1.5;
+}
 pre {
 	background: rgba($c-3, .6);
 	padding: 10px;

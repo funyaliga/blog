@@ -22,6 +22,7 @@ import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_p
 </pre>
 
 ### 安装Zen Coding ###
+<!-- read more -->
 <pre>
 Perferences->package control（快捷键：ctrl+shift+p）
 输入install
