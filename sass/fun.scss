@@ -263,19 +263,22 @@ article{
 
 @include keyframes(cc) {
     0% {
-        color: #9da1d0
+        color: #aa87ce
+        // color: #9da1d0
     }
 
     33% {
-       color: #9db4d0
+       color: #87a7cf
+       // color: #9db4d0
     }
 
     66% {
-        color: #9dd0bb
+        color: #85ceb0
+        // color: #9dd0bb
     }
 
     100% {
-        color: #d09dcc
+        color: #cf87c9
     }
 }
 // @include keyframes(cc) {
