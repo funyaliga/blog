@@ -8,7 +8,7 @@ title: 范鴨's blog
 	<article>
 		<div class="tit">
 			<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-			<time>{{ post.date | date_to_string }}</time>
+			<time><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b. %d, %Y' }}</time></time>
 		</div>
 		<div class="info">
 			<div class="content">{{ post.excerpt }}</div>
