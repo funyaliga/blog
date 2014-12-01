@@ -14,8 +14,20 @@ title: 范鴨's blog
 			<div class="content">{{ post.excerpt }}</div>
 		</div>
 		<div class="meta">
-			<a href="" class="cate">{{post.categories[0]}}</a>
-			<a href="" class="more">阅读更多</a>
+			{% if post.category %}
+				{% assign cate = false %}
+				{% for d_cate in site.data.categories %}
+					{% if d_cate.slug == post.category %}
+						{% assign cate = d_cate %}
+					{% endif %}
+				{% endfor %}
+				{% if cate and cate != '' %}
+					<a href="/category/{{ cate.slug }}/" class="cate">{{cate.name]}}</a>
+				{% else %}
+					<a href="javascript:" class="cate">{{post.category}}</a>
+				{% endif %}
+			{% endif %}
+			<a href="{{ post.url }}" class="more">阅读更多</a>
 		</div>
 	</article>
 {% endfor %}

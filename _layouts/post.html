@@ -3,20 +3,55 @@ layout: default
 ---
 
 <section>
+	{% assign post = page %}
 	<article>
 		<div class="tit">
-			<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
-			<time>{{ page.date | date_to_string }}</time>
+			<h2>{{ post.title }}</h2>
+			<time><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b. %d, %Y' }}</time></time>
 		</div>
+
 		<div class="info">
 			<div class="content">{{ content }}</div>
+		</div>
+		
+		<div class="meta">
+
+		{% if post.category %}
+			<i>c</i>
+			{% for d_cate in site.data.categories %}
+				{% if d_cate.slug == post.category %}
+					{% assign cate = d_cate %}
+				{% endif %}
+			{% endfor %}
+			{% if cate and cate != '' %}
+				<a href="/category/{{ cate.slug }}/" class="cate">{{cate.name]}}</a>
+			{% else %}
+				<a href="javascript:" class="cate">{{post.category}}</a>
+			{% endif %}
+		{% endif %}
+
+		{% if post.tags.size > 0 %}
+			<i>t</i>
+			{% for post_tag in post.tags %}
+				{% assign tag = false %}
+				{% for data_tag in site.data.tags %}
+					{% if data_tag.slug == post_tag %}
+						{% assign tag = data_tag %}
+					{% endif %}
+				{% endfor %}
+				{% if tag %}
+					<a href="/tag/{{ tag.slug }}/">{{ tag.name }}</a>
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+		
 		</div>
 	</article>
 </section>
 
 
 <!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
+<div class="ds-thread" data-thread-key="{{ post.uid }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

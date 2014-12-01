@@ -2,8 +2,9 @@
 layout: post
 title:  "Sublime Text 2 备忘录"
 date:   2012-12-08 10:29:21
-categories: 工具
+category: tool
 permalink: /12128
+uid: 12128
 ---
 
 ### 推荐资料 ###

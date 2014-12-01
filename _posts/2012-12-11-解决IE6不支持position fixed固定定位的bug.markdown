@@ -2,14 +2,17 @@
 layout: post
 title:  "解决IE6不支持position:fixed固定定位的bug"
 date:   2012-12-11 11:16:00
-categories: 前端
+category: web
 permalink: /12131
+uid: 12131
 ---
 
 ### 在IE6中实现 position:fixed; 的办法: ###
 
 **浏览器头部固定**
-<pre class="code"><code class="css">.fixed_top {
+
+```css
+.fixed_top {
 	position:fixed;
 	top:0px;
 }
@@ -19,7 +22,8 @@ permalink: /12131
 	bottom:auto;
 	top:expression(eval(document.documentElement.scrollTop));
 }
-</code></pre>
+```
+
 <!-- read more -->
 
 **浏览器底部固定**

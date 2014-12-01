@@ -2,7 +2,9 @@
 layout: post
 title:  "xxxx"
 date:   2012-02-01 14:05:21
-categories: jekyll
+category: jekyll
+permalink: /12021
+uid: 12021
 ---
 
 
